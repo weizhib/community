@@ -11,3 +11,17 @@
 ##工具
 [Git](https://git-scm.com/download)
 [Visual-paradigm](https://www.visual-paradigm.com)
+
+## 脚本
+
+``` sql 
+CREATE CACHED TABLE PUBLIC.USER(
+    ID INT DEFAULT NOT NULL NULL_TO_DEFAULT SEQUENCE PUBLIC.SYSTEM_SEQUENCE_CFF8FB43_241A_47BD_A06F_F0D3C0BCEF1B,
+    ACCOUNT_ID VARCHAR(100),
+    NAME VARCHAR(50),
+    TOKEN CHAR(36),
+    GMT_CREATE BIGINT,
+    GMT_MODIFIDE BIGINT
+)
+
+```
