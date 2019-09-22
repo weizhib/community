@@ -13,7 +13,9 @@ public interface UserMapper {
     @Select("SELECT * FROM CITY WHERE state = #{state}")
     GithubUser findByState(@Param("state") String state);
 
-    @Insert("insert into user (name, account_id, token, gmt_create, gmt_modifide) values (#{name},#{accountId},#{token},#{gmtCreate},#{gmtModifide})")
+    @Insert("insert into user (name, account_id, token, gmt_create, gmt_modified, avatar_url) values (#{name},#{accountId},#{token},#{gmtCreate},#{gmtModified},#{avatarUrl})")
     void insert(User user);
 
+    @Select("SELECT * FROM user WHERE token = #{token}")
+    User findByToken(@Param("token")String token);
 }
