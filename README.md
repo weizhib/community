@@ -23,5 +23,5 @@ CREATE CACHED TABLE PUBLIC.USER(
     GMT_CREATE BIGINT,
     GMT_MODIFIDE BIGINT
 )
-
+mvn -Dmybatis.generator.overwrite=true mybatis-generator:generate
 ```
